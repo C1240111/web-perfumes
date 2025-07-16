@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subx - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+    color: #333;
+}
+header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      border-bottom: 1px solid #eee;
+      border-radius: 5px;
+      box-shadow: 1px solid #000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      /* color: #fdfafa; */
+      font-weight: 500;
+    }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero { 
+    
+    background-color: #007bff; /* Light blue background as in image */
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #171616;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #070707;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.get-in-touch, .send-message {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+}
+
+.get-in-touch h2, .send-message h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.get-in-touch p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info .icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0f2f7; /* Light blue for icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: #007bff; /* Icon color */
+    font-size: 18px;
+}
+
+.contact-info .info-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.contact-info .info-item p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons .icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0f2f7; /* Light blue for social icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007bff; /* Social icon color */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons .icon-circle:hover {
+    background-color: #cce9f5;
+}
+
+.send-message form .form-group {
+    margin-bottom: 20px;
+}
+
+.send-message form input[type="text"],
+.send-message form input[type="email"],
+.send-message form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.send-message form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.send-message form input::placeholder,
+.send-message form textarea::placeholder {
+    color: #aaa;
+}
+
+.btn-submit {
+    background-color: #ff8c00; /* Orange color for submit button */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Make button fit content */
+}
+
+.btn-submit:hover {
+    background-color: #e67e00;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 60px 0;
+    font-size: 15px;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col ul {
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}
+</style>
+</head>
+<body>
+<header>
+  <div><strong>NEW PERFUME</strong></div>
+  <nav>
+    <a href="home page .html">Home</a>
+    <a href="collection.html">Collection</a>
+    <a href="product.html">Product</a>
+    <a href="about us.html">about us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+    <section class="hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+    <div class="get-in-touch">
+    <h2>Get In Touch</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor elit, sit amet dolor nulla eu purus.</p>
+ <div class="contact-info">
+   <div class="info-item">
+     <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+         <div>
+         <h3>Address</h3>
+     <p>mogadisho banaadir, kenya, ethobia</p>
+             </div>
+     </div>
+        <div class="info-item">
+         <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+         <div>
+             <h3>Phone Number</h3>
+                 <p>0612854699</p>
+            </div>
+                        </div>
+                        <div class="info-item">
+             <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                            <div>
+             <h3>E-Mail</h3>
+                                <p>mail@ebyan.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Follow Us:</h3>
+    <div class="social-icons">
+ <div class="icon-circle"><i class="fab fa-facebook-f"></i></div>
+<div class="icon-circle"><i class="fab fa-twitter"></i></div>
+<div class="icon-circle"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+                </div>
+
+<div class="send-message">
+<h2>Send a Message</h2>
+    <form>
+     <div class="form-group">
+          <input type="text" placeholder="Name">
+            </div>
+        <div class="form-group">
+            <input type="email" placeholder="E-mail address">
+                 </div>
+             <div class="form-group">
+              <textarea placeholder="Message"></textarea>
+            </div>
+         <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+<div class="footer-content">
+ <div class="footer-col about-us">
+   <h3>Subx</h3>
+ <p>Drive growth, retain customers, and scale up effortlessly with Subx.</p>
+      <p>mailto@ebyan.com</p>
+         </div>
+                <div class="footer-col features">
+            <h3>Features</h3>
+          <ul>
+         <li>Business Messenger</li>
+ <li>Customizable bots</li>
+         <li>Automated answers</li>
+     <li>Product Tours</li>
+                    </ul>
+                </div>
+                <div class="footer-col resources">
+                    <h3>Resources</h3>
+     <ul>
+          <li>Whitepapers & Blog</li>
+         <li>Watch a Demo</li>
+                        <li>Product Glossary</li>
+     <li>Industry Reports</li>
+                    </ul>
+                </div>
+                <div class="footer-col company">
+                    <h3>Company</h3>
+         <ul>
+     <li>About</li>
+      <li>Customers</li>
+      <li>Community forum</li>
+     <li>Term and privacy</li>
+                    </ul>
+                </div>
+            </div>
+ <div class="footer-bottom">
+    <p>&copy; Copyright ebbi. All right reserved</p>
+<p>Made with love by Mollive</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

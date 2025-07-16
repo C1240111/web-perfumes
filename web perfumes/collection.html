@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfume collection</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)),url(images/cute.jpeg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+            float: right;
+        }
+        .nav-links{
+            flex: 1;
+            text-align: center;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .nav-links ul li::after{
+           content:'';
+           width: 0%;
+           height: 2px;
+           background: #141313;
+           display: block;
+           margin: auto;
+        }
+        .nav-links ul li:hover::after{
+            width: 50px;
+        }
+       .text-box{
+        width: 50%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translateY(-50%,-50%);
+        text-align: center;
+
+       }
+       .text-box h1{
+        font-size: 62px;
+        text-align: center;
+       }
+       .text-box p{
+        text-align: center;
+         margin: 10px 0 40px ;
+        font-size: 14px;
+        color: white;
+       }
+     .btn{
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+     }
+     .btn:hover{
+        border: 1px solid #141313;
+        background-color: #141313;
+        transition: 1s;
+     }
+     .brand{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px; 
+     }
+     .brand h1{
+        font-size: 36px;
+        font-weight: 600;
+
+     }
+     .brand p{
+        color: #777;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+     }
+     .row{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+     }
+     .perfumes{
+        flex-basis: 31%;
+        background-color: #fff3ff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 1s;
+
+     }
+     h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+     }
+     .perfumes:hover{
+        box-shadow: 0 0 20px 0px rgb(0,0,0,0.2);
+     }
+     .my-brand{
+      padding: 0%;
+       width: 80%;
+       margin: auto;
+       text-align: center;
+       padding-top: 50px;
+     }
+     h2{
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 30px;
+     }
+     .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      text-align: center;
+      box-shadow: 5px 5px solid #000;
+    }
+    .product img {
+      width: 150%;
+      max-height: 180px;
+      object-fit: contain;
+
+    }
+    .product p {
+      margin: 10px 0;
+    }
+    .product .price {
+      color: #888;
+    }
+    .hero-three-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 20px;
+  background-color: #fdf5f5;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-three-images .hero-image {
+  flex: 1;
+  text-align: center;
+  max-width: 300px;
+}
+
+.hero-three-images img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-three-images img:hover {
+  transform: scale(1.05);
+}
+
+.hero-image h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.hero-image p {
+  font-size: 14px;
+  color: #555;
+}
+.footer {
+
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-brand h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social p {
+  color: #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+    </style>
+</head>
+<body>
+  
+    <section class="header">
+    <nav>
+         <div class="nav-links">
+                <ul>
+                    <li><a href="home page .html">home</a></li>
+                    <li><a href="collection.html">collection</a></li>
+                    <li><a href="product.html">product</a></li>
+                    <li><a href="about us.html">about us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+              </nav>
+         </div>
+        <div class="text-box">
+            <h1>perfume brands</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.Nobis numquam iste doloremque repudiandae commodi eveniet vero molestiae odio dolore accusantium officiis voluptatibus, itaque voluptas quasi minus esse at minima. Asperiores?
+            </p>
+            <a class="btn" href="#">click here</a>
+        </div>
+    </section>
+    <section class="brand">
+        <h1>channel</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore soluta</p>
+
+        <div class="row">
+            <div class="perfumes">
+                <h3>dior</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut eius iusto ratione fuga. Animi recusandae cumque, consequatur itaque fugit magni ratione odit, ipsum rem esse blanditiis placeat eveniet sit at.</p>
+            </div>
+            <div class="perfumes">
+                <h3>luxurious</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut eius iusto ratione fuga. Animi recusandae cumque, consequatur itaque fugit magni ratione odit, ipsum rem esse blanditiis placeat eveniet sit at.</p>
+            </div>
+            <div class="perfumes">
+                <h3>zara</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut eius iusto ratione fuga. Animi recusandae cumque, consequatur itaque fugit magni ratione odit, ipsum rem esse blanditiis placeat eveniet sit at.</p>
+            </div>
+        </div>
+    </section>
+    <section class="my-brand">
+        <h1>my brands</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore soluta</p>
+     <br> <br> <br> <br><br> <br>
+        <h2>Popular Products</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/black.jpeg" alt="Chanel">
+      <p>Chanel Coco 100ml</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (1).jpeg" alt="Noir">
+      <p>Tom Ford Noir</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (2).jpeg" alt="Gucci">
+      <p>Gucci Bloom 50ml</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (4).jpeg" alt="Black">
+      <p>Black Essence</p>
+      <p class="price">$41</p>
+    </div>
+  </div>
+  <div class="products">
+    <div class="product">
+      <img src="images/black (5).jpeg" alt="Chanel">
+      <p>Chanel Coco 100ml</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (6).jpeg" alt="Noir">
+      <p>Tom Ford Noir</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (7).jpeg" alt="Gucci">
+      <p>Gucci Bloom 50ml</p>
+      <p class="price">$41</p>
+    </div>
+    <div class="product">
+      <img src="images/black (8).jpeg" alt="Black">
+      <p>Black Essence</p>
+      <p class="price">$41</p>
+    </div>
+  </div>
+</section>
+  <section class="hero-three-images">
+  <div class="hero-image">
+    <img src="images/3D Perfume Concept Ads __ Behance.jpeg" alt="Perfume Image 1">
+    <h3>Elegant Perfume</h3>
+    <p>Classic scent for special moments</p>
+  </div>
+  <div class="hero-image">
+    <img src="images/09bc4d50-4764-4a66-bfa1-30a1291b63e6.jpeg" alt="Perfume Image 2">
+    <h3>Luxury Touch</h3>
+    <p>Luxury in every drop</p>
+  </div>
+  <div class="hero-image">
+    <img src="images/miss dior perfume🩵🐳 !.jpeg" alt="Perfume Image 3">
+    <h3>Modern Fragrance</h3>
+    <p>Fresh, floral, unforgettable</p>
+  </div>
+</section>
+<section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Yummy Perfumes</h2>
+      <p>Fragrance that defines elegance.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <p>Instagram | Facebook | Twitter</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Yummy Perfumes. All rights reserved.</p>
+  </div>
+</footer>
+    </section>
+</body>
+</html>

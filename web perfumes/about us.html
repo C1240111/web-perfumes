@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Halee Perfume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url('images/download\ \(32\).jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+    }
+
+    /* Collection */
+    .collection {
+      background-color: #fdf6f8;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product {
+      width: 250px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 15px 0 5px;
+    }
+
+    .product p {
+      font-size: 14px;
+      margin: 0 15px 15px;
+    }
+
+    /* Why Us */
+    .why-us {
+      background-color: #fff9fb;
+      text-align: center;
+    }
+
+    .reasons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .reason {
+      width: 280px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background-color: #fef1f4;
+    }
+
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .review {
+      width: 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .review span {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      color: #888;
+    }
+
+
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      background-color: #d13f75;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      background-image: url('images/3D\ Perfume\ Concept\ Ads.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .footer-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column {
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-top: 40px;
+      color: #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>about us</h1>
+      <p>Elegant. Unique. Long-lasting. Discover your signature scent.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>My Halee Perfume is a premium fragrance brand offering elegant, long-lasting perfumes crafted for sophistication and charm. Our 20ml collection is designed to deliver quality and class in every drop.</p>
+  </section>
+
+  <!-- Collection -->
+  <section class="collection" id="collection">
+    <h2>Our Perfume Collection (20ml)</h2>
+    <div class="products">
+      <div class="product">
+        <img src="images/black.jpeg" alt="Rose Oud">
+        <h3>Rose Oud</h3>
+        <p>Floral & woody scent perfect for evening elegance.</p>
+      </div>
+      <div class="product">
+        <img src="images/cute.jpeg" alt="Vanilla Bloom">
+        <h3>Vanilla Bloom</h3>
+        <p>Sweet and smooth with hints of creamy vanilla.</p>
+      </div>
+      <div class="product">
+        <img src="images/113bc099-c733-4763-add9-eca76360f3c5.jpeg" alt="Musk Touch">
+        <h3>Musk Touch</h3>
+        <p>Soft musk with fresh top notes, everyday elegance.</p>
+      </div>
+      <div class="product">
+        <img src="images/black (1).jpeg" alt="Amber Spirit">
+        <h3>Amber Spirit</h3>
+        <p>Warm amber with spicy notes, long-lasting and bold.</p>
+      </div>
+      <div class="product">
+        <img src="images/CHANEL COCO MADEMOISELLE Intense Eau de Parfum (100ml).jpeg" alt="Soft Gold">
+        <h3>Soft Gold</h3>
+        <p>Elegant scent with golden highlights for special moments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose My Halee?</h2>
+    <div class="reasons">
+      <div class="reason">
+        <h4>Elegant Scents</h4>
+        <p>Crafted for sophistication and style.</p>
+      </div>
+      <div class="reason">
+        <h4>Long-lasting</h4>
+        <p>One spray lasts all day long.</p>
+      </div>
+      <div class="reason">
+        <h4>Travel Friendly</h4>
+        <p>Perfect 20ml size for on-the-go use.</p>
+      </div>
+      <div class="reason">
+        <h4>Premium Quality</h4>
+        <p>Made with rare, luxurious ingredients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <div class="review">
+        <p>"The Rose Oud is so unique, I get compliments every time I wear it."</p>
+        <span>- Amina H.</span>
+      </div>
+      <div class="review">
+        <p>"Perfect size for my bag and smells divine!"</p>
+        <span>- Fartun M.</span>
+      </div>
+      <div class="review">
+        <p>"I love the packaging and the lasting power. Definitely buying again."</p>
+        <span>- Yasir D.</span>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <h4>Our Brands</h4>
+        <ul>
+          <li>My Halee</li>
+          <li>Halee Gold</li>
+          <li>Halee Oud</li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li>Shipping Info</li>
+          <li>Return Policy</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>Email: info@myhalee.com</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="footer-bottom">&copy; 2025 My Halee Perfume. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
